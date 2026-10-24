@@ -1,28 +1,101 @@
+
+# ==========================================
 # Node.js dependencies
+# ==========================================
 node_modules/
 **/node_modules/
+jspm_packages/
+bower_components/
+web_modules/
 
-# Environment secrets
+# ==========================================
+# Environment variables and secrets
+# ==========================================
 .env
 .env.*
 !.env.example
 
-# Logs
+# ==========================================
+# Logs and diagnostic reports
+# ==========================================
+logs/
 *.log
 npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+lerna-debug.log*
+report.[0-9]*.[0-9]*.[0-9]*.[0-9]*.json
 
-# OS files
-.DS_Store
+# ==========================================
+# Runtime data
+# ==========================================
+pids/
+*.pid
+*.seed
+*.pid.lock
 
-# Database backups
+# ==========================================
+# Testing and coverage
+# ==========================================
+coverage/
+*.lcov
+.nyc_output/
+lib-cov/
+
+# ==========================================
+# Build tools and caches
+# ==========================================
+build/Release/
+.grunt/
+.cache/
+.parcel-cache/
+.next/
+out/
+.nuxt/
+dist/
+.output/
+.vuepress/dist/
+.temp/
+.svelte-kit/
+**/.vitepress/dist/
+**/.vitepress/cache/
+.docusaurus/
+
+# ==========================================
+# TypeScript and package-manager files
+# ==========================================
+*.tsbuildinfo
+.npm/
+.eslintcache
+.stylelintcache
+.node_repl_history
+.yarn-integrity
+*.tgz
+.lock-wscript
+
+# ==========================================
+# Database files and backups
+# ==========================================
+*.sql
+*.sqlite
+*.sqlite3
 expense_tracker/files/db_backup/
 
-# Runtime logs
+# ==========================================
+# Project-specific runtime/user files
+# ==========================================
 expense_tracker/files/loggers/
-*.log
-
-# User-uploaded profile pictures
 expense_tracker/files/profile_pictures/
 
-# Local database dumps
-*.sql
+# ==========================================
+# Operating system files
+# ==========================================
+.DS_Store
+Thumbs.db
+
+# ==========================================
+# IDE settings
+# ==========================================
+.vscode/
+.idea/
+
