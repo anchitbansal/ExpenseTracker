@@ -1,0 +1,940 @@
+{
+  "info": {
+    "_postman_id": "f4203546-8171-42f1-9474-81200151749c",
+    "name": "Expense Tracker",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+    "_exporter_id": "33525082"
+  },
+  "item": [
+    {
+      "name": "SignUp",
+      "request": {
+        "method": "POST",
+        "header": [
+          {
+            "key": "device-id",
+            "value": "001"
+          },
+          {
+            "key": "device-name",
+            "value": "abc"
+          },
+          {
+            "key": "device-token",
+            "value": "123lkj"
+          },
+          {
+            "key": "device-version",
+            "value": "18"
+          },
+          {
+            "key": "device-type",
+            "value": "ios"
+          }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": "{\n    \"api\": \"SignUp\",\n    \"timestamp\": \"8569314\",\n    \"data\":\n    {\n        \"display_name\": \"Ankur\",\n        \"email\": \"ansjdnsjncd@gmail.com\",\n        \"mobile\": \"7777777777\",\n        \"password\": \"123@123\"\n    }\n}",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "{{base_url}}/api/user/signup",
+          "host": [
+            "{{base_url}}"
+          ],
+          "path": [
+            "api",
+            "user",
+            "signup"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "LogIn",
+      "request": {
+        "method": "POST",
+        "header": [
+          {
+            "key": "device-id",
+            "value": "002"
+          },
+          {
+            "key": "device-name",
+            "value": "abc123"
+          },
+          {
+            "key": "device-token",
+            "value": "654lkj"
+          },
+          {
+            "key": "device-type",
+            "value": "ios"
+          },
+          {
+            "key": "device-version",
+            "value": "18"
+          }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": "{\n    \"api\": \"login\",\n    \"timestamp\": \"7896512\",\n    \"data\": {\n        \"email\": \"abc123@gmail.com\",\n        \"password\": \"123@123\"\n    }\n}",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "{{base_url}}/api/user/login",
+          "host": [
+            "{{base_url}}"
+          ],
+          "path": [
+            "api",
+            "user",
+            "login"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "Send Otp",
+      "request": {
+        "method": "POST",
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": "{\n    \"api\" : \"send Otp\",\n    \"timestamp\" :\"122222322434\",\n    \"data\": {\n        \"email\": \"abc123@gmail.com\"\n    }\n}",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "{{base_url}}/api/user/forgetPassword",
+          "host": [
+            "{{base_url}}"
+          ],
+          "path": [
+            "api",
+            "user",
+            "forgetPassword"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "Reset Password",
+      "request": {
+        "method": "POST",
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": "{\n    \"api\" : \"Reset Password\",\n    \"timestamp\" :\"122222322434\",\n    \"data\": {\n        \"email\": \"adkmcfdc@gmail.com\",\n        \"newPassword\": \"Abc123@\"\n    }\n}",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "{{base_url}}/api/user/resetPassword",
+          "host": [
+            "{{base_url}}"
+          ],
+          "path": [
+            "api",
+            "user",
+            "resetPassword"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "Profile",
+      "request": {
+        "auth": {
+          "type": "bearer",
+          "bearer": [
+            {
+              "key": "token",
+              "value": "{{token}}",
+              "type": "string"
+            }
+          ]
+        },
+        "method": "POST",
+        "header": [
+          {
+            "key": "device-id",
+            "value": "002",
+            "type": "text"
+          },
+          {
+            "key": "device-name",
+            "value": "realme",
+            "type": "text"
+          },
+          {
+            "key": "device-token",
+            "value": "abc123",
+            "type": "text"
+          },
+          {
+            "key": "device-version",
+            "value": "18",
+            "type": "text"
+          },
+          {
+            "key": "device-type",
+            "value": "android",
+            "type": "text"
+          }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": "{\r\n    \"api\": \"Reset Password\",\r\n    \"timestamp\": \"122222322434\",\r\n    \"data\":{}\r\n}",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "{{base_url}}/api/user/auth/profile",
+          "host": [
+            "{{base_url}}"
+          ],
+          "path": [
+            "api",
+            "user",
+            "auth",
+            "profile"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "Add Profile Picture",
+      "request": {
+        "auth": {
+          "type": "bearer",
+          "bearer": [
+            {
+              "key": "token",
+              "value": "{{token}}",
+              "type": "string"
+            }
+          ]
+        },
+        "method": "POST",
+        "header": [
+          {
+            "key": "device-id",
+            "value": "002"
+          },
+          {
+            "key": "device-name",
+            "value": "realme"
+          },
+          {
+            "key": "device-token",
+            "value": "abc123"
+          },
+          {
+            "key": "device-version",
+            "value": "18"
+          },
+          {
+            "key": "device-type",
+            "value": "android"
+          }
+        ],
+        "body": {
+          "mode": "formdata",
+          "formdata": [
+            {
+              "key": "profile_picture",
+              "type": "file",
+              "src": "postman-cloud:///1f1bf081-4d14-4a60-b354-50837ea1245b"
+            },
+            {
+              "key": "api",
+              "value": "add_profile",
+              "type": "text"
+            },
+            {
+              "key": "timestamp",
+              "value": "2365489",
+              "type": "text"
+            }
+          ]
+        },
+        "url": {
+          "raw": "{{base_url}}/api/user/auth/add/profile/picture",
+          "host": [
+            "{{base_url}}"
+          ],
+          "path": [
+            "api",
+            "user",
+            "auth",
+            "add",
+            "profile",
+            "picture"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "Delete User",
+      "request": {
+        "method": "POST",
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": "{\n    \"api\" : \"Delete user\",\n    \"timestamp\" :\"122222322434\",\n    \"data\": {\n        \"email\": \"ankurchauhan1489@gmail.com\",\n        \"password\": \"Abc123@\"\n    }\n}",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "{{base_url}}/api/user/delete",
+          "host": [
+            "{{base_url}}"
+          ],
+          "path": [
+            "api",
+            "user",
+            "delete"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "Category List",
+      "request": {
+        "auth": {
+          "type": "bearer",
+          "bearer": [
+            {
+              "key": "token",
+              "value": "{{token}}",
+              "type": "string"
+            }
+          ]
+        },
+        "method": "POST",
+        "header": [
+          {
+            "key": "device-id",
+            "value": "002"
+          },
+          {
+            "key": "device-name",
+            "value": "realme"
+          },
+          {
+            "key": "device-token",
+            "value": "abc123"
+          },
+          {
+            "key": "device-version",
+            "value": "18"
+          },
+          {
+            "key": "device-type",
+            "value": "android"
+          }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": "{\r\n    \"data\": {\r\n      \r\n    },\r\n    \"api\": \"Category list\",\r\n    \"timestamp\": \"898113232\"\r\n}",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "{{base_url}}/api/user/auth/category/list",
+          "host": [
+            "{{base_url}}"
+          ],
+          "path": [
+            "api",
+            "user",
+            "auth",
+            "category",
+            "list"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "Sub Category List",
+      "request": {
+        "auth": {
+          "type": "bearer",
+          "bearer": [
+            {
+              "key": "token",
+              "value": "{{token}}",
+              "type": "string"
+            }
+          ]
+        },
+        "method": "POST",
+        "header": [
+          {
+            "key": "device-id",
+            "value": "002"
+          },
+          {
+            "key": "device-name",
+            "value": "realme"
+          },
+          {
+            "key": "device-token",
+            "value": "abc123"
+          },
+          {
+            "key": "device-version",
+            "value": "18"
+          },
+          {
+            "key": "device-type",
+            "value": "android"
+          }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": "{\r\n    \"data\": {\r\n        \"category_id\":\"2\"\r\n    },\r\n    \"api\": \"user_registration\",\r\n    \"timestamp\": \"898113232\"\r\n}",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "{{base_url}}/api/user/auth/subcategory/list",
+          "host": [
+            "{{base_url}}"
+          ],
+          "path": [
+            "api",
+            "user",
+            "auth",
+            "subcategory",
+            "list"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "Add Expense",
+      "request": {
+        "auth": {
+          "type": "bearer",
+          "bearer": [
+            {
+              "key": "token",
+              "value": "{{token}}",
+              "type": "string"
+            }
+          ]
+        },
+        "method": "POST",
+        "header": [
+          {
+            "key": "device-id",
+            "value": "002"
+          },
+          {
+            "key": "device-name",
+            "value": "realme"
+          },
+          {
+            "key": "device-token",
+            "value": "abc123"
+          },
+          {
+            "key": "device-version",
+            "value": "18"
+          },
+          {
+            "key": "device-type",
+            "value": "android"
+          }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": "{\r\n    \"data\": {\r\n        \"exp_by\": \"Chirag\",\r\n        \"amount\": 500.50,\r\n        \"category_id\": \"2\",\r\n        \"sub_category_id\": \"3\",\r\n        \"pay_type\": \"CASH\",\r\n        \"exp_date\": \"2026-10-03\",\r\n        \"description\": \"Petrol\"\r\n    },\r\n    \"api\": \"Add_expense\",\r\n    \"timestamp\": \"898113232\"\r\n}",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "{{base_url}}/api/user/auth/expense/add",
+          "host": [
+            "{{base_url}}"
+          ],
+          "path": [
+            "api",
+            "user",
+            "auth",
+            "expense",
+            "add"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "Expense Update",
+      "request": {
+        "auth": {
+          "type": "bearer",
+          "bearer": [
+            {
+              "key": "token",
+              "value": "{{token}}",
+              "type": "string"
+            }
+          ]
+        },
+        "method": "POST",
+        "header": [
+          {
+            "key": "device-id",
+            "value": "002"
+          },
+          {
+            "key": "device-name",
+            "value": "realme"
+          },
+          {
+            "key": "device-token",
+            "value": "abc123"
+          },
+          {
+            "key": "device-version",
+            "value": "18"
+          },
+          {
+            "key": "device-type",
+            "value": "android"
+          }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": "{\r\n    \"data\": {\r\n        \"expense_id\": 5,\r\n        \"exp_by\": \"Adarsh Upadhayay\",\r\n        \"amount\": 500.50,\r\n        \"category_id\": 2,\r\n        \"sub_category_id\": 2,\r\n        \"pay_type\": \"UPI\",\r\n        \"exp_date\": \"2026-10-03\",\r\n        \"description\": \"Updated monthly Internet bill payment\"\r\n    },\r\n    \"api\": \"user_registration\",\r\n    \"timestamp\": \"898113232\"\r\n}",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "{{base_url}}/api/user/auth/expense/update",
+          "host": [
+            "{{base_url}}"
+          ],
+          "path": [
+            "api",
+            "user",
+            "auth",
+            "expense",
+            "update"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "Expenses List",
+      "request": {
+        "auth": {
+          "type": "bearer",
+          "bearer": [
+            {
+              "key": "token",
+              "value": "{{token}}",
+              "type": "string"
+            }
+          ]
+        },
+        "method": "POST",
+        "header": [
+          {
+            "key": "device-id",
+            "value": "002"
+          },
+          {
+            "key": "device-name",
+            "value": "realme"
+          },
+          {
+            "key": "device-token",
+            "value": "abc123"
+          },
+          {
+            "key": "device-version",
+            "value": "18"
+          },
+          {
+            "key": "device-type",
+            "value": "android"
+          }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": "{\r\n    \"data\": {\r\n        \"page_no\" : \"1\",\r\n        \"filters\": {\r\n            //\"exp_by\": \"chirag\",\r\n            //\"category_id\": 2,\r\n            //\"sub_category_id\": 3,\r\n            //\"pay_type\": \"CASH\",\r\n            //\"from_date\": \"2026-09-15\",\r\n            //\"to_date\": \"2026-10-10\"\r\n        }\r\n    },\r\n    \"api\": \"user_registration\",\r\n    \"timestamp\": \"898113232\"\r\n}",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "{{base_url}}/api/user/auth/expenses/list",
+          "host": [
+            "{{base_url}}"
+          ],
+          "path": [
+            "api",
+            "user",
+            "auth",
+            "expenses",
+            "list"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "Expense delete",
+      "request": {
+        "auth": {
+          "type": "bearer",
+          "bearer": [
+            {
+              "key": "token",
+              "value": "{{token}}",
+              "type": "string"
+            }
+          ]
+        },
+        "method": "POST",
+        "header": [
+          {
+            "key": "device-id",
+            "value": "002"
+          },
+          {
+            "key": "device-name",
+            "value": "realme"
+          },
+          {
+            "key": "device-token",
+            "value": "abc123"
+          },
+          {
+            "key": "device-version",
+            "value": "18"
+          },
+          {
+            "key": "device-type",
+            "value": "android"
+          }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": "{\r\n    \"data\": {\r\n        \"expense_id\":\"7\"\r\n    },\r\n    \"api\": \"Delete_expense\",\r\n    \"timestamp\": \"898113232\"\r\n}",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "{{base_url}}/api/user/auth/expense/delete",
+          "host": [
+            "{{base_url}}"
+          ],
+          "path": [
+            "api",
+            "user",
+            "auth",
+            "expense",
+            "delete"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "Expense detail",
+      "request": {
+        "auth": {
+          "type": "bearer",
+          "bearer": [
+            {
+              "key": "token",
+              "value": "{{token}}",
+              "type": "string"
+            }
+          ]
+        },
+        "method": "POST",
+        "header": [
+          {
+            "key": "device-id",
+            "value": "002"
+          },
+          {
+            "key": "device-name",
+            "value": "realme"
+          },
+          {
+            "key": "device-token",
+            "value": "abc123"
+          },
+          {
+            "key": "device-version",
+            "value": "18"
+          },
+          {
+            "key": "device-type",
+            "value": "android"
+          }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": "{\r\n    \"data\": {\r\n        \"expense_id\": 5\r\n    },\r\n    \"api\": \"expense_details\",\r\n    \"timestamp\": \"898113232\"\r\n}",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "{{base_url}}/api/user/auth/expense/detail",
+          "host": [
+            "{{base_url}}"
+          ],
+          "path": [
+            "api",
+            "user",
+            "auth",
+            "expense",
+            "detail"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "Expense Dashboard",
+      "request": {
+        "auth": {
+          "type": "bearer",
+          "bearer": [
+            {
+              "key": "token",
+              "value": "{{token}}",
+              "type": "string"
+            }
+          ]
+        },
+        "method": "POST",
+        "header": [
+          {
+            "key": "device-id",
+            "value": "002"
+          },
+          {
+            "key": "device-name",
+            "value": "realme"
+          },
+          {
+            "key": "device-token",
+            "value": "abc123"
+          },
+          {
+            "key": "device-version",
+            "value": "18"
+          },
+          {
+            "key": "device-type",
+            "value": "android"
+          }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": "{\r\n    \"data\": {\r\n        \"from_date\": \"2026-09-15\",\r\n        \"to_date\": \"2026-10-10\"\r\n    },\r\n    \"api\": \"user_registration\",\r\n    \"timestamp\": \"898113232\"\r\n}",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "{{base_url}}/api/user/auth/expense/dashboard",
+          "host": [
+            "{{base_url}}"
+          ],
+          "path": [
+            "api",
+            "user",
+            "auth",
+            "expense",
+            "dashboard"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "Member List",
+      "request": {
+        "auth": {
+          "type": "bearer",
+          "bearer": [
+            {
+              "key": "token",
+              "value": "{{token}}",
+              "type": "string"
+            }
+          ]
+        },
+        "method": "POST",
+        "header": [
+          {
+            "key": "device-id",
+            "value": "002"
+          },
+          {
+            "key": "device-name",
+            "value": "realme"
+          },
+          {
+            "key": "device-token",
+            "value": "abc123"
+          },
+          {
+            "key": "device-version",
+            "value": "18"
+          },
+          {
+            "key": "device-type",
+            "value": "android"
+          }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": "{\r\n    \"data\": {\r\n        \"from_date\": \"2026-01-01\",\r\n        \"to_date\": \"2026-03-31\"\r\n    },\r\n    \"api\": \"Member_list\",\r\n    \"timestamp\": \"898113232\"\r\n}",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "{{base_url}}/api/user/auth/member/list",
+          "host": [
+            "{{base_url}}"
+          ],
+          "path": [
+            "api",
+            "user",
+            "auth",
+            "member",
+            "list"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "Member Add",
+      "request": {
+        "auth": {
+          "type": "bearer",
+          "bearer": [
+            {
+              "key": "token",
+              "value": "{{token}}",
+              "type": "string"
+            }
+          ]
+        },
+        "method": "POST",
+        "header": [
+          {
+            "key": "device-id",
+            "value": "002"
+          },
+          {
+            "key": "device-name",
+            "value": "realme"
+          },
+          {
+            "key": "device-token",
+            "value": "abc123"
+          },
+          {
+            "key": "device-version",
+            "value": "18"
+          },
+          {
+            "key": "device-type",
+            "value": "android"
+          }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": "{\r\n    \"data\": {\r\n        \"member_name\": \"Chirag\",\r\n        \"relation\": \"brother\"\r\n    },\r\n    \"api\": \"Add_member\",\r\n    \"timestamp\": \"898113232\"\r\n}",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "{{base_url}}/api/user/auth/member/add",
+          "host": [
+            "{{base_url}}"
+          ],
+          "path": [
+            "api",
+            "user",
+            "auth",
+            "member",
+            "add"
+          ]
+        }
+      },
+      "response": []
+    }
+  ]
+}

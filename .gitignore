@@ -1,0 +1,28 @@
+# Node.js dependencies
+node_modules/
+**/node_modules/
+
+# Environment secrets
+.env
+.env.*
+!.env.example
+
+# Logs
+*.log
+npm-debug.log*
+
+# OS files
+.DS_Store
+
+# Database backups
+expense_tracker/files/db_backup/
+
+# Runtime logs
+expense_tracker/files/loggers/
+*.log
+
+# User-uploaded profile pictures
+expense_tracker/files/profile_pictures/
+
+# Local database dumps
+*.sql
